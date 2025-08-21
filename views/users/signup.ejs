@@ -1,0 +1,63 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<div class="d-flex justify-content-center align-items-center bg-light py-5">
+  <div class="card shadow-lg p-4" style="width: 28rem; border-radius: 1rem;">
+    <!-- Heading -->
+    <h2 class="text-center mb-4 text-success fw-bold">Create your Velora Account</h2>
+
+    <!-- Form -->
+    <form action="/signup" method="POST" class="needs-validation" novalidate>
+      
+      <!-- Username -->
+      <div class="mb-3">
+        <label for="username" class="form-label fw-semibold">Username</label>
+        <input
+          name="username"
+          id="username"
+          placeholder="e.g. Devaj"
+          type="text"
+          class="form-control"
+          required
+        >
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label fw-semibold">Email</label>
+        <input
+          name="email"
+          id="email"
+          type="email"
+          placeholder="e.g. devaj9090@gmail.com"
+          class="form-control"
+          required
+        >
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4">
+        <label for="password" class="form-label fw-semibold">Password</label>
+        <input
+          name="password"
+          id="password"
+          type="password"
+          placeholder="Enter a strong password"
+          class="form-control"
+          required
+        >
+      </div>
+
+      <!-- Submit -->
+      <button class="btn btn-success w-100 fw-semibold">Sign Up</button>
+
+      <!-- Extra Links -->
+      <div class="text-center mt-3">
+        <small class="text-muted">
+          Already have an account? 
+          <a href="/login" class="text-success fw-semibold">Login here</a>
+        </small>
+      </div>
+    </form>
+  </div>
+</div>
